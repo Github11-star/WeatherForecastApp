@@ -1,0 +1,21 @@
+{
+  "data": {
+    "timelines": [
+      {
+        "timestep": "current",
+        "endTime": "2022-08-17T04:04:00Z",
+        "startTime": "2022-08-17T04:04:00Z",
+        "intervals": [
+          {
+            "startTime": "2022-08-17T04:04:00Z",
+            "values": {
+              "temperature": 30.63,
+              "windDirection": 84.5,
+              "windGust": 2.13
+            }
+          }
+        ]
+      }
+    ]
+  }
+}
