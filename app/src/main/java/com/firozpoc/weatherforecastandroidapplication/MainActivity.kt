@@ -117,6 +117,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    // this is the boolean method and checking the gps providers and network providers
     private fun isLocationEnabled() : Boolean {
         val locationManager : LocationManager = getSystemService(Context.LOCATION_SERVICE) as LocationManager
         return locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER) || locationManager.isProviderEnabled(
@@ -124,6 +125,7 @@ class MainActivity : AppCompatActivity() {
         )
     }
 
+    // checking the required coarse location and fine location
     private fun requestPermission() {
         ActivityCompat.requestPermissions(
             this, arrayOf(android.Manifest.permission.ACCESS_COARSE_LOCATION,
@@ -136,6 +138,7 @@ class MainActivity : AppCompatActivity() {
         private const val PERMISSION_REQUEST_ACCESS_LOCATION = 100
     }
 
+    // checking the coarse location and fine location
     private fun checkPermission() : Boolean {
         if (ActivityCompat.checkSelfPermission(this,
                 android.Manifest.permission.ACCESS_COARSE_LOCATION)
@@ -149,6 +152,7 @@ class MainActivity : AppCompatActivity() {
         return false
     }
 
+    // this method are checking the permission request access location
     override fun onRequestPermissionsResult(
         requestCode: Int,
         permissions: Array<out String>,
