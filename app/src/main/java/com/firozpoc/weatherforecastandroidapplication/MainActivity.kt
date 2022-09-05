@@ -45,6 +45,11 @@ class MainActivity : AppCompatActivity() {
 
             binding.apply {
                 //tvTemperature.text = values.temperature.toString()
+                tvTemperature.text = values.temperature.toString()
+                windDirection.text = values.windDirection.toString()
+                windGust.text = values.windGust.toString()
+                tvLatitude.text = values.latitude.toString()
+                tvLongitude.text = values.longitude.toString()
             }
         }
 
@@ -52,11 +57,11 @@ class MainActivity : AppCompatActivity() {
         try {
             val jsonString = getJSONFromAssets()!!
             val values = Gson().fromJson(jsonString, Values::class.java)
-            tvTemperature.text = values.temperature.toString()
+            /*tvTemperature.text = values.temperature.toString()
             windDirection.text = values.windDirection.toString()
             windGust.text = values.windGust.toString()
             tvLatitude.text = values.latitude.toString()
-            tvLongitude.text = values.longitude.toString()
+            tvLongitude.text = values.longitude.toString()*/
 
         } catch (e: JSONException) {
             //exception
